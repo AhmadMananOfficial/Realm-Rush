@@ -42,7 +42,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4129511301346133660}
   - component: {fileID: 3160860397784634422}
-  - component: {fileID: 2614561725640228474}
+  - component: {fileID: 4061720618905358464}
+  - component: {fileID: 7846707514717671526}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -110,7 +111,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2614561725640228474
+--- !u!114 &4061720618905358464
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -99,99
+  m_text: -99,-99
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -139,8 +140,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279440359
-  m_fontColor: {r: 0.9056604, g: 0.07262372, b: 0.07262372, a: 1}
+    rgba: 4280361445
+  m_fontColor: {r: 0.8962264, g: 0.13105197, b: 0.13105197, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -202,6 +203,18 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!114 &7846707514717671526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531021481655959844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a99e82c2d1bf949a864f3b5fd8e676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2966233233964069563
 GameObject:
   m_ObjectHideFlags: 0
