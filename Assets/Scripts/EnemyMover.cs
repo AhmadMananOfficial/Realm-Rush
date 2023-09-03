@@ -6,18 +6,20 @@ public class EnemyMover : MonoBehaviour
 {
 	
 	[SerializeField] List<WayPoint> Path = new List<WayPoint>();
-    
+	[SerializeField] int delayTime = 1; 
+	
     void Start()
     {
-	    PrintWayPointName();
+	    StartCoroutine(FollowPath());
     }
 
     
-	 void PrintWayPointName()
+	IEnumerator FollowPath()
     {
 	    foreach(WayPoint waypoint in Path)
 	    {
-	    	Debug.Log(waypoint.name);
+	    	transform.position = waypoint.transform.position;
+	    	yield return new WaitForSeconds(delayTime);
 	    }
     }
 }
