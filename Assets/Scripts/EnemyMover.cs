@@ -6,7 +6,7 @@ public class EnemyMover : MonoBehaviour
 {
 	
 	[SerializeField] List<WayPoint> Path = new List<WayPoint>();
-	[SerializeField] int delayTime = 1; 
+	[SerializeField] [Range(0f,5f)] float moveSpeed = 1; 
 	
     void Start()
     {
@@ -15,11 +15,21 @@ public class EnemyMover : MonoBehaviour
 
     
 	IEnumerator FollowPath()
-    {
+	{
 	    foreach(WayPoint waypoint in Path)
 	    {
-	    	transform.position = waypoint.transform.position;
-	    	yield return new WaitForSeconds(delayTime);
+	    	 Vector3 startPoint = transform.position;
+		    Vector3 endPoint = waypoint.transform.position;
+		    float travelTime = 0f;
+		    
+		    transform.LookAt(endPoint);
+		    
+		    while(travelTime < 1f)
+		    {
+		    	travelTime += Time.deltaTime * moveSpeed;
+		    	transform.position = Vector3.Lerp(startPoint, endPoint, travelTime);
+		    	yield return new WaitForEndOfFrame();
+		    }
 	    }
     }
 }
