@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaceable: 1
+  defendorPrefab: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
 --- !u!65 &7526819254079130883
 BoxCollider:
   m_ObjectHideFlags: 0
