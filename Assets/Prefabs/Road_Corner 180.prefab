@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3221146616118698223, guid: 7f00dff95729de9419a7a7c73f5e038f, type: 3}
       propertyPath: m_Name
-      value: Road_Corner 180t
+      value: Road_Corner 180
       objectReference: {fileID: 0}
     - target: {fileID: 8572842788648864117, guid: 7f00dff95729de9419a7a7c73f5e038f, type: 3}
       propertyPath: m_LocalRotation.w
