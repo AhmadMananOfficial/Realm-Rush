@@ -32,7 +32,7 @@ public class CoordinateLabler : MonoBehaviour
 		{
 			DisplayCoordinates();
 			UpdateObjectName();
-			labelText.enabled = true;
+			
 		}
 	    
 		ToogleVisible();

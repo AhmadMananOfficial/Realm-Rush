@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displaytext: {fileID: 0}
-  startingBalance: 1000
+  startingBalance: 150
   currentBalance: 0
