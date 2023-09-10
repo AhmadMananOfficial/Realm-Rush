@@ -10,7 +10,7 @@ public class CoordinateLabler : MonoBehaviour
 	[SerializeField] Color defaultColor = Color.white;
 	[SerializeField] Color blockedColor = Color.gray;
 	[SerializeField] Color exploredColor = Color.yellow;
-	[SerializeField] Color pathColor = new Color(1f, 0.5f, 0f);
+	[SerializeField] Color pathColor = Color.blue;
 
 	TextMeshPro labelText;
 	Vector2Int coordinates = new Vector2Int();
@@ -34,6 +34,7 @@ public class CoordinateLabler : MonoBehaviour
 		{
 			DisplayCoordinates();
 			UpdateObjectName();
+			labelText.enabled = true;
 			
 		}
 	    
@@ -78,8 +79,8 @@ public class CoordinateLabler : MonoBehaviour
     
 	void DisplayCoordinates()
 	{
-		coordinates.x = Mathf.RoundToInt(transform.parent.position.x /UnityEditor.EditorSnapSettings.move.x);
-		coordinates.y = Mathf.RoundToInt(transform.parent.position.z /UnityEditor.EditorSnapSettings.move.z);
+		coordinates.x = Mathf.RoundToInt(transform.parent.position.x /UnityEditor.EditorSnapSettings.move.x );
+		coordinates.y = Mathf.RoundToInt(transform.parent.position.z /UnityEditor.EditorSnapSettings.move.z );
 		
 		labelText.text = coordinates.x + "," + coordinates.y;		
 	}
