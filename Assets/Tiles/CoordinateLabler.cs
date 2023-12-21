@@ -34,7 +34,7 @@ public class CoordinateLabler : MonoBehaviour
 		{
 			DisplayCoordinates();
 			UpdateObjectName();
-			labelText.enabled = true;
+			labelText.enabled = false;
 			
 		}
 	    
