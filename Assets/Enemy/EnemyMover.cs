@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
@@ -12,7 +13,7 @@ public class EnemyMover : MonoBehaviour
 	Enemy enemy;
 	GridManager gridManager;
 	PathFinder pathFinder;
-
+	
 	void OnEnable()
 	{
 		ReturnToStart();
@@ -24,6 +25,8 @@ public class EnemyMover : MonoBehaviour
 		enemy = GetComponent<Enemy>();
 		gridManager = FindObjectOfType<GridManager>();
 		pathFinder = FindObjectOfType<PathFinder>();
+		
+		
 	}
 
 	void RecalculatePath(bool resetPath)
@@ -52,9 +55,12 @@ public class EnemyMover : MonoBehaviour
 
 	void FinishPath()
 	{
+		enemy.LosingHeart();
 		enemy.PenaltyGold();
 		gameObject.SetActive(false);
 	}
+
+	
 
 	IEnumerator FollowPath() 
 	{

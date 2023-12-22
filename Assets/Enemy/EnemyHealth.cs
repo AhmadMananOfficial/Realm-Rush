@@ -12,7 +12,9 @@ public class EnemyHealth : MonoBehaviour
 	int currentHitPoints = 0;
     
 	Enemy enemy;
-    
+	AudioSource audioSource; 
+	public AudioClip hitClip;
+	
 	void OnEnable()
    {
 	   currentHitPoints = maxHitPoints;
@@ -20,6 +22,8 @@ public class EnemyHealth : MonoBehaviour
 
 	void Start()
 	{
+		audioSource = GetComponent<AudioSource>();
+		audioSource.clip = hitClip;
 		enemy = GetComponent<Enemy>();
 	}
 	
@@ -31,6 +35,7 @@ public class EnemyHealth : MonoBehaviour
 	void ProcessHit()
 	{
 		currentHitPoints--;
+		audioSource.Play();
 		
 		if(currentHitPoints <= 0)
 		{

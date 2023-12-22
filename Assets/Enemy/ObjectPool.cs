@@ -9,9 +9,12 @@ public class ObjectPool : MonoBehaviour
 	[SerializeField] [Range(0.1f, 30f)] float spawnTimer = 1f;
     
 	GameObject[] pool;
+	
+	Bank bank;
 
 	void Awake()
 	{
+		bank = FindObjectOfType<Bank>();
 		PopulatePool();
 	}
 
@@ -35,7 +38,7 @@ public class ObjectPool : MonoBehaviour
 	{
 		for(int i = 0; i < pool.Length; i++)
 		{
-			if(pool[i].activeInHierarchy == false)
+			if(pool[i].activeInHierarchy == false && bank.currentHeart > 0)
 			{
 				pool[i].SetActive(true);
 				return;

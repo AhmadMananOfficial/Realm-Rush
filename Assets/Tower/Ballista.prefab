@@ -61,7 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae88ea9ff6c11e440817c1e49120e974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 75
+  cost: 50
+  BuildDelayTime: 1
 --- !u!1 &3665997102047581434
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +231,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 45
       minScalar: 5
       maxCurve:
         serializedVersion: 2

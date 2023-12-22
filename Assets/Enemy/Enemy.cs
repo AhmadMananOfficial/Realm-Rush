@@ -6,12 +6,15 @@ public class Enemy : MonoBehaviour
 {
 	[SerializeField] int rewardGold = 25;
 	[SerializeField] int penaltyGold = 30;
+	[SerializeField] int losingHeart = 1;
+	
 	
 	Bank bank;
 	
 	
     void Start()
-    {
+	{
+		
 	    bank = FindObjectOfType<Bank>();  
     }
 
@@ -27,7 +30,15 @@ public class Enemy : MonoBehaviour
 	{
 		if(bank == null) return;
 		
-		bank.WithDraw(penaltyGold);  
+		bank.WithDraw(penaltyGold); 
 	}
    
+	public void LosingHeart()
+	{
+		if(bank == null) return;
+		
+		bank.LoseHeart(losingHeart);
+	}
+	
+	
 }
