@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 [ExecuteAlways]
@@ -79,10 +77,10 @@ public class CoordinateLabler : MonoBehaviour
     
 	void DisplayCoordinates()
 	{
-		coordinates.x = Mathf.RoundToInt(transform.parent.position.x /UnityEditor.EditorSnapSettings.move.x );
-		coordinates.y = Mathf.RoundToInt(transform.parent.position.z /UnityEditor.EditorSnapSettings.move.z );
+		//coordinates.x = Mathf.RoundToInt(transform.parent.position.x /EditorSnapSettings.move.x );
+		//coordinates.y = Mathf.RoundToInt(transform.parent.position.z /EditorSnapSettings.move.z );
 		
-		labelText.text = coordinates.x + "," + coordinates.y;		
+		//labelText.text = coordinates.x + "," + coordinates.y;		
 	}
 	
 	void UpdateObjectName()

@@ -59,6 +59,7 @@ public class Bank : MonoBehaviour
 		{
 			fullHeart[currentHeart].sprite = emptyHeart;
 			gameOverPanel.SetActive(true);
+			Time.timeScale = 0f;
 		}
 	} 
 	
